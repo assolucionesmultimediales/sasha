@@ -2,10 +2,10 @@
 @import url(https://fonts.bunny.net/css?family=noto-sans-sc:300,400,500,700);
 
 :root {
-    --primary-color: rgb(83,163,242);
-    --primary-color-lighten: rgb(230,240,254);
+    --primary-color: rgb(146, 87, 173);
+    --primary-color-lighten: rgb(250, 230, 254);
     --primary-color-hover: rgb(230,240,254);
-    --text-color: rgb(51,51,51);
+    --text-color: rgb(43, 11, 38);
     --text-color-lighten: rgb(91, 91, 91);
     --card-color: rgba(255,255,255);
     --card-color-transparent: rgba(255,255,255,0.85);
@@ -33,13 +33,13 @@
 }
 
 :root.dark {
-    --primary-color: rgb(113,160,238);
-    --primary-color-lighten: rgb(53, 62, 82);
+    --primary-color: rgb(106, 54, 117);
+    --primary-color-lighten: rgb(188, 147, 203);
     --primary-color-hover: rgb(12,16,22);
-    --text-color: rgb(232,233,234);
+    --text-color: rgb(241, 204, 239);
     --text-color-lighten: rgb(212,213,214);
     --card-color: rgb(29, 36, 44);
-    --card-color-lighten: rgb(53, 62, 82);
+    --card-color-lighten: rgb(188, 147, 203);
     --card-color-transparent: rgba(37, 43, 56,0.85);
     --background-color: rgb(12,17,24);
 }
