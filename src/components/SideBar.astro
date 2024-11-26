@@ -15,7 +15,7 @@ const categories = await GetCategories();
     >
       <a href="/about" class="avatar-wrapper">
         <img
-          src={YukinaConfig.Avatar}
+          src="/sashaperfil.jpg"
           alt="avatar"
           class="avatar lozad select-none"
         />
@@ -103,6 +103,9 @@ const categories = await GetCategories();
 
   .avatar {
     @apply rounded-xl w-56 h-56 hover:cursor-pointer transition-all;
+    width: auto;
+  height: auto;
+  object-fit: cover; 
   }
 
   .username > p {
@@ -151,4 +154,5 @@ const categories = await GetCategories();
   .tag {
     font-family: "Noto Sans SC", sans-serif;
   }
+  
 </style>
