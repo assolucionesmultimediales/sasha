@@ -1,0 +1,34 @@
+---
+import Main from "../layouts/MainLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import { misPosteos } from "../data/posts.js";
+import type { PaginateFunction } from "astro";
+import { GetSortedPosts } from "../utils/content";
+
+// Configuración de rutas estáticas
+export async function getStaticPaths({ paginate }: { paginate: PaginateFunction }) {
+  const postCollections = await GetSortedPosts();
+  return paginate(postCollections, { pageSize: 6 });
+}
+---
+
+<Main>
+  <div class="space-y-8">
+    <div class="posts space-y-4">
+      {misPosteos?.map((entry, index) => (
+        <div
+          class="onload-animation"
+          style={`animation-delay: calc(var(--onload-animation-delay) + ${index + 1} * var(--onload-animation-interval));`}
+        >
+          <PostCard {...entry} />
+        </div>
+      ))}
+    </div>
+  </div>
+</Main>
+
+<style>
+  .posts {
+    @apply w-full;
+  }
+</style>
