@@ -1,7 +1,7 @@
 ---
 import { readFileSync } from "node:fs";
 import { parse } from "yaml";
-import { GetCoverURLForUnspecifiedEntry } from "../utils/cover";
+
 
 // 定义组件的属性
 export interface Props {
@@ -44,11 +44,6 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
     {
       hasHeaderImg && (
         <div class="fixed">
-          <img
-            class="item lozad"
-            src={headerImg ?? GetCoverURLForUnspecifiedEntry(slug ?? "")}
-            alt="post cover"
-          />
         </div>
       )
     }
